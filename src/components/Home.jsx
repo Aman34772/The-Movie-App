@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Sidenav from "./templates/sidenav";
+import Sidenav from "./templates/Sidenav";
 import Topnav from "./templates/Topnav";
 import axios from "../utils/axios";
 import Header from "./templates/Header";
@@ -46,13 +46,17 @@ const Home = () => {
         <div className=" flex justify-between p-2">
           <h1 className="text-3xl font-semibold text-zinc-400">Trending</h1>
 
-          <Dropdown title="Filter" options={["tv", "movie", "all"]} func={(e)=>setCategory(e.target.value)}/>
+          <Dropdown
+            title="Filter"
+            options={["tv", "movie", "all"]}
+            func={(e) => setCategory(e.target.value)}
+          />
         </div>
         <HorizontalCards data={trending} func={setCategory} />
       </div>
     </>
   ) : (
-    <Loading/>
+    <Loading />
   );
 };
 
