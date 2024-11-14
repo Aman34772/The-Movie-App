@@ -27,7 +27,7 @@ const Trending = () => {
       } else {
         setHasMore(false);
       }
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log("Error : ", error);
     }
@@ -46,7 +46,7 @@ const Trending = () => {
   useEffect(() => {
     refreshHandler();
   }, [category, duration]);
-  console.log(trending);
+  // console.log(trending);
   return trending.length > 0 ? (
     <div className=" w-screen h-screen ">
       <div className="w-full h-[10vh] px-[5%]  flex items-center justify-between">

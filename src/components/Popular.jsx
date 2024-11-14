@@ -24,7 +24,7 @@ const Popular = () => {
       } else {
         setHasMore(false);
       }
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log("Error : ", error);
     }

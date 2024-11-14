@@ -24,7 +24,7 @@ const People = () => {
           } else {
             setHasMore(false);
           }
-          console.log(data);
+          // console.log(data);
         } catch (error) {
           console.log("Error : ", error);
         }
@@ -67,7 +67,7 @@ const People = () => {
         hasMore={hasMore}
         loader={<h1>Loading...</h1>}
       >
-        <Cards data={person} title={category} />
+        <Cards data={person} title="person" />
       </InfiniteScroll>
     </div>
   ) : (

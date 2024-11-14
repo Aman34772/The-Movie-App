@@ -1,12 +1,16 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import Loading from "./components/Loading";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import Movie from "./components/Movie";
 import TvShows from "./components/TvShows";
-import People from "./components/People"
+import People from "./components/People";
+import MovieDetails from "./components/MovieDetails";
+import PersonDetails from "./components/PersonDetails";
+import TvDetails from "./components/TvDetails";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -15,9 +19,14 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/trending" element={<Trending />} />
         <Route path="/popular" element={<Popular />} />
-        <Route path="/movies" element={<Movie />} />
-        <Route path="/tvshows" element={<TvShows />} />
-        <Route path="/people" element={<People />} />
+        <Route path="/movies" element={<Movie />}></Route>
+        <Route path="/movie/details/:id" element={<MovieDetails />} />
+        <Route path="/tvshows" element={<TvShows />}></Route>
+        <Route path="/tv/details/:id" element={<TvDetails />} />
+        <Route path="/people" element={<People />}></Route>
+        <Route path="/person/details/:id" element={<PersonDetails />} />
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contactUs" element={<Contact/>}/>
       </Routes>
     </div>
   );
